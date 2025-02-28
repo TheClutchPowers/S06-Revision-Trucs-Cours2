@@ -14,16 +14,16 @@ public class CreationAvecDelaiEtRepetition : MonoBehaviour
 
     void CreerObjet()
     {
-        // Instancie un nouveau objet et garde une référence à lui
+        // Instancie un nouveau objet et garde une rï¿½fï¿½rence ï¿½ lui
         GameObject nouvelleCopie = Instantiate(_objetACreer, _objetPlacemenent.transform.position, _objetPlacemenent.transform.rotation);
 
-        // Prends une référence au Rigidbody qui est attaché au nouveau objet
+        // Prends une rï¿½fï¿½rence au Rigidbody qui est attachï¿½ au nouveau objet
         Rigidbody _rbNouvelleCopie = nouvelleCopie.GetComponent<Rigidbody>();
 
-        // Applique une force de translation initiale aléatoire
+        // Applique une force de translation initiale alï¿½atoire
         _rbNouvelleCopie.AddRelativeForce(0, 2f + Random.value, 0, ForceMode.Impulse);
 
-        // Applique une force de rotation initiale aléatoire
+        // Applique une force de rotation initiale alï¿½atoire
         _rbNouvelleCopie.AddRelativeTorque(0f, Random.value, Random.value, ForceMode.Impulse);
     }
 }
